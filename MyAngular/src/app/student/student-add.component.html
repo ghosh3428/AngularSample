@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header bg-primary text-light">
+            <h2 class="text-center">ADD A STUDENT</h2>
+        </div>
+        <div class="card-body bg-success text-light">
+            <form #studentForm="ngForm">
+                <div class="form-group row">
+                    <label for="firstName" class="col-md-4">First Name</label>
+                    <div class="col-md-8">
+                        <input id="firstName" type="text" class="form-control" name="firstName"
+                        [ngModel]="firstName">
+                    </div>
+
+                </div>
+
+                <div class="form-group row">
+                    <label for="lastName" class="col-md-4">Last Name</label>
+                    <div class="col-md-8">
+                        <input id="lastName" type="text" 
+                        class="form-control" name="lastName" [ngModel]="lastName">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="rollNumber" class="col-md-4">Roll Number</label>
+                    <div class="col-md-8">
+                        <input id="rollNumber" type="number" 
+                        class="form-control" name="rollNumber" [ngModel]="rollNumber">
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <button class="btn btn-primary" type="submit">Save</button>
+                </div>
+            </form>
+        </div>
+        <div class="card-footer">
+            {{studentForm.value | json}}
+        </div>
+    </div>
+
+</div>
