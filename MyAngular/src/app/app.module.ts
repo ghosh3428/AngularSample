@@ -7,7 +7,7 @@ import { StudentAddComponent } from './student/student-add.component';
 import { StudentViewComponent } from './student/student-view.component';
 import { StudentSearchComponent } from './student/student-search.component';
 import { RouterModule } from '@angular/router';
-import {Routes} from '@angular/router';
+import { Routes} from '@angular/router';
 
 
 const myroutes:Routes = [
@@ -29,7 +29,8 @@ const myroutes:Routes = [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(myroutes)
+    RouterModule.forRoot(myroutes),
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
