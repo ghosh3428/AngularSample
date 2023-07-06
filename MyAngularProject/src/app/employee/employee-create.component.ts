@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Employee } from '../Model/Employe';
+import { FormControl, FormGroup } from '@angular/forms';
 
 
 @Component({
@@ -7,34 +8,52 @@ import { Employee } from '../Model/Employe';
   templateUrl: './employee-create.component.html',
   styleUrls: ['./employee-create.component.css']
 })
-export class EmployeeCreateComponent 
+export class EmployeeCreateComponent implements OnInit
 {
-  employee:Employee[] = [
-    {
-      firstName : "Rohan",
-      lastName : "Mishra",
-      dateOfBirth : new Date()
-    },
-    {
-      firstName : "Sumit",
-      lastName : "Das",
-      dateOfBirth : new Date()
-    },
-    {
-      firstName : "Sanjay",
-      lastName : "Sinha",
-      dateOfBirth : new Date()
-    },
-    {
-      firstName : "Rajiv",
-      lastName : "Kumar",
-      dateOfBirth : new Date()
-    },
-    {
-      firstName : "Soham",
-      lastName : "Das",
-      dateOfBirth : new Date()
-    }
-  ];
+  
+  employeeForm!: FormGroup;
+
+
+  construct()
+  {
+    this.employeeForm = new FormGroup(
+      {
+          employeeId : new FormControl(),
+          firstName : new FormControl(),
+          lastName : new FormControl(),
+          salary : new FormControl(),
+          department : new FormGroup(
+            {
+              departmentId : new FormControl(),
+              departmentName : new FormControl(),
+              location : new FormControl()
+            }
+          )
+      }
+    )
+  }
+
+  ngOnInit(): void 
+  {
+    this.employeeForm = new FormGroup(
+      {
+          employeeId : new FormControl(),
+          firstName : new FormControl(),
+          lastName : new FormControl(),
+          salary : new FormControl(),
+          department : new FormGroup(
+            {
+              departmentId : new FormControl(),
+              departmentName : new FormControl(),
+              location : new FormControl()
+            }
+          )
+      }
+    )
+  }
+
+
+
+
 
 }

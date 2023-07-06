@@ -6,22 +6,36 @@ import { EmployeeViewComponent } from './employee/employee-view.component';
 import { EmployeeCreateComponent } from './employee/employee-create.component';
 import { RouterModule } from '@angular/router';
 import { Routes } from '@angular/router';
-
-
+import { StudentAddComponent } from './student/student-add.component';
+import { StudentViewComponent } from './student/student-view.component';
+import { StudentSearchComponent } from './student/student-search.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 const myroutes:Routes = [
-  { path: 'view', component: EmployeeViewComponent },
-  { path: 'create', component: EmployeeCreateComponent }
+  { path: 'employeeview', component: EmployeeViewComponent },
+  { path: 'employeecreate', component: EmployeeCreateComponent },
+  { path: 'studentadd', component: StudentAddComponent },
+  { path: 'studentview', component: StudentViewComponent },
+  { path: 'studentsearch', component: StudentSearchComponent },
+  
 ];
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeViewComponent,
-    EmployeeCreateComponent
+    EmployeeCreateComponent,
+    StudentAddComponent,
+    StudentViewComponent,
+    StudentSearchComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(myroutes)
+    RouterModule.forRoot(myroutes),
+    FormsModule,
+    ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
