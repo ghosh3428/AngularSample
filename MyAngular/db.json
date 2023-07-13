@@ -1,0 +1,64 @@
+{
+  "student": [
+    {
+      "rollNumber": 1,
+      "firstName": "Suman",
+      "lastName": "Das",
+      "studentClass": "XI",
+      "section": "A",
+      "maths": 80,
+      "science": 80,
+      "english": 80,
+      "computer": 80,
+      "sst": 80,
+      "total": 400,
+      "average": 80.00,
+      "grade": "A"
+    },
+    {
+      "rollNumber": 2,
+      "firstName": "Sanjay",
+      "lastName": "Sen",
+      "studentClass": "XI",
+      "section": "A",
+      "maths": 80,
+      "science": 80,
+      "english": 80,
+      "computer": 80,
+      "sst": 80,
+      "total": 400,
+      "average": 80.00,
+      "grade": "A"
+    },
+    {
+      "rollNumber": 3,
+      "firstName": "Soham",
+      "lastName": "Singh",
+      "studentClass": "XI",
+      "section": "A",
+      "maths": 80,
+      "science": 80,
+      "english": 80,
+      "computer": 80,
+      "sst": 80,
+      "total": 400,
+      "average": 80.00,
+      "grade": "A"
+    },
+    {
+      "rollNumber": 4,
+      "firstName": "Sujoy",
+      "lastName": "Ghosh",
+      "studentClass": "XI",
+      "section": "A",
+      "maths": 80,
+      "science": 80,
+      "english": 80,
+      "computer": 80,
+      "sst": 80,
+      "total": 400,
+      "average": 80.00,
+      "grade": "A"
+    }
+  ]
+}

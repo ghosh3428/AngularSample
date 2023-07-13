@@ -8,6 +8,8 @@ import { StudentViewComponent } from './student/student-view.component';
 import { StudentSearchComponent } from './student/student-search.component';
 import { RouterModule } from '@angular/router';
 import { Routes} from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { StudentService } from './service/studenservice';
 
 
 const myroutes:Routes = [
@@ -30,9 +32,10 @@ const myroutes:Routes = [
     AppRoutingModule,
     FormsModule,
     RouterModule.forRoot(myroutes),
+    HttpClientModule
     
   ],
-  providers: [],
+  providers: [StudentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

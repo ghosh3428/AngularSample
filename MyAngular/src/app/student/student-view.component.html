@@ -1,1 +1,40 @@
-<p>student-view works!</p>
+
+<div class="container">
+<br/>
+    <table class="table table-primary table-striped">
+        <thead>
+            <tr >
+              <th>Roll Number</th>
+              <th>First Name</th>
+              <th>Last name</th>
+              <th>Class</th>
+              <th>Section</th>
+              <th>Maths</th>
+              <th>Science</th>
+              <th>SST</th>
+              <th>English</th>
+              <th>Computer</th>
+              <th>Total</th>
+              <th>Average</th>
+              <th>Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let student of students">
+                <td>{{student.rollNumber}}</td>
+                <td>{{student.firstName}}</td>
+                <td>{{student.lastName}}</td>
+                <td>{{student.studentClass}}</td>
+                <td>{{student.section}}</td>
+                <td>{{student.maths}}</td>
+                <td>{{student.science}}</td>
+                <td>{{student.sst}}</td>
+                <td>{{student.english}}</td>
+                <td>{{student.computer}}</td>
+                <td>{{student.total}}</td>
+                <td>{{student.average}}</td>
+                <td>{{student.grade}}</td>
+            </tr>
+          </tbody>
+    </table>
+</div>
