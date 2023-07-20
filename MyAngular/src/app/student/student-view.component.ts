@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StudentService } from '../service/studenservice';
 import { IStudentModel } from '../model/IStudentModel';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-student-view',
@@ -11,7 +12,7 @@ export class StudentViewComponent implements OnInit
 {
 
   students!: IStudentModel[];
-  constructor(private _ss: StudentService) { }
+  constructor(private _ss: StudentService, private _router: Router) { }
 
   ngOnInit(): void 
   {
@@ -19,5 +20,9 @@ export class StudentViewComponent implements OnInit
       (studentlist) => this.students = studentlist,
       (err) =>console.log(err)
     );
+  }
+
+  editButtonClick(Id: number) {
+    this._router.navigate(['/edit', Id]);
   }
 }

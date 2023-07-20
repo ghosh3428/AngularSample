@@ -28,4 +28,10 @@ export class StudentService
         return throwError('There is a problem with the service. We are notified & working on it. Please try again later.');
     }
 
+    getStudent(id: number): Observable<IStudentModel> 
+    {
+        return this.httpClient.get<IStudentModel>(`${this.baseUrl}/${id}`)
+            .pipe(catchError(this.handleError));
+    }
+
 } 

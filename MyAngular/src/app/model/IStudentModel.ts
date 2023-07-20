@@ -2,6 +2,7 @@
 
 export interface IStudentModel
 {
+    id:number;
     rollNumber: number;
     firstName: string;
     lastName: string;
