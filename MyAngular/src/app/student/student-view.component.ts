@@ -12,6 +12,7 @@ export class StudentViewComponent implements OnInit
 {
 
   students!: IStudentModel[];
+  message !: string;
   constructor(private _ss: StudentService, private _router: Router) { }
 
   ngOnInit(): void 
@@ -22,7 +23,21 @@ export class StudentViewComponent implements OnInit
     );
   }
 
-  editButtonClick(Id: number) {
+  editButtonClick(Id: number|null) {
     this._router.navigate(['/edit', Id]);
+  }
+
+  viewButtonClick(Id: number|null) {
+    this._router.navigate(['/viewStudent', Id]);
+  }
+
+  deleteButtonClick(Id: number|null)
+  {
+    this._ss.deleteStudent(Id).subscribe(
+      () => this._router.navigate(['/deleteresult']),
+      (err) =>console.log(err)
+    );
+
+    
   }
 }

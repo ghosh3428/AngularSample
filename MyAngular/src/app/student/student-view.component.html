@@ -1,6 +1,6 @@
 <div class="container">
   <br />
-
+<h1>{{message}}</h1>
   <div *ngFor="let student of students" class="row border border-dark" >
     <div class="col-md-4">
       <img src="" alt="student{{ student.id}}" />
@@ -18,9 +18,9 @@
         </tr>
         <tr>
           <td colspan="2" class="row">
-            <button class="btn btn-primary offset-md-1 col-md-3">View</button>
+            <button class="btn btn-primary offset-md-1 col-md-3" (click) ="viewButtonClick(student.id)">View</button>
             <button class="btn btn-warning offset-md-1 col-md-3" (click)="editButtonClick(student.id)">Edit</button>
-            <button class="btn btn-danger  offset-md-1 col-md-3">Delete</button>
+            <button class="btn btn-danger  offset-md-1 col-md-3" (click)="deleteButtonClick(student.id)">Delete</button>
           </td>
         </tr>
       </tbody>

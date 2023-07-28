@@ -1,7 +1,8 @@
 <div class="container">
     <div class="card">
+        
         <div class="card-header bg-primary text-light">
-            <h2 class="text-center">ADD A STUDENT</h2>
+            <h2 class="text-center">{{pageTitle}}</h2>
         </div>
         <div class="card-body bg-success text-light">
             <form   [formGroup]="studentForm">
@@ -95,7 +96,7 @@
                 </div>
                 
                 <div class="panel-footer">
-                    <button class="btn btn-primary" type="submit" >Save</button>
+                    <button class="btn btn-primary" type="submit" (click)="savebuttonclick()">Save</button>
                 </div>
             </form>
         </div>

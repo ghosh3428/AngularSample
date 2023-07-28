@@ -2,7 +2,7 @@
 
 export interface IStudentModel
 {
-    id:number;
+    id:number|null;
     rollNumber: number;
     firstName: string;
     lastName: string;

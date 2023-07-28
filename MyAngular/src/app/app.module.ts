@@ -11,11 +11,14 @@ import { Routes} from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { StudentService } from './service/studenservice';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ViewSingleStudentComponent } from './student/view-single-student.component';
 
 const myroutes:Routes = [
   { path:"add" , component:StudentAddComponent},
   { path:"search" , component:StudentSearchComponent},
   { path:"view" , component:StudentViewComponent},
+  { path:"viewStudent/:id" , component:ViewSingleStudentComponent},
+  { path:"deleteresult" , component:StudentViewComponent},
   { path:'edit/:id', component:StudentAddComponent },
   { path:"" , component:StudentViewComponent},
 ]
@@ -26,6 +29,7 @@ const myroutes:Routes = [
     StudentAddComponent,
     StudentViewComponent,
     StudentSearchComponent,
+    ViewSingleStudentComponent,
 
   ],
   imports: [

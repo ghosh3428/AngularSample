@@ -1,4 +1,4 @@
-import { HttpClient, HttpErrorResponse } from "@angular/common/http";
+import { HttpClient, HttpErrorResponse, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { IStudentModel } from "../model/IStudentModel";
 import { Observable, catchError, throwError } from "rxjs";
@@ -33,5 +33,30 @@ export class StudentService
         return this.httpClient.get<IStudentModel>(`${this.baseUrl}/${id}`)
             .pipe(catchError(this.handleError));
     }
+
+    updateStudent(student: IStudentModel): Observable<void> {
+        return this.httpClient.put<void>(`${this.baseUrl}/${student.id}`, student, 
+        {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json'
+            })
+        })
+            .pipe(catchError(this.handleError));
+    }
+
+    addStudent(student: IStudentModel): Observable<IStudentModel> {
+        return this.httpClient.post<IStudentModel>(this.baseUrl, student, {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json'
+            })
+        })
+        .pipe(catchError(this.handleError));
+    }
+
+    deleteStudent(id: number|null): Observable<void> {
+        return this.httpClient.delete<void>(`${this.baseUrl}/${id}`)
+            .pipe(catchError(this.handleError));
+    }
+
 
 } 
